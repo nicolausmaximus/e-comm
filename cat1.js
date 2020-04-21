@@ -41,6 +41,10 @@ function showInfo(data, tabletop) {
   span.onclick = function() {
     modal.style.display = "none";
   }
+
+
+
+
 }
 };
 
