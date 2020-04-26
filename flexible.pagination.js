@@ -31,9 +31,9 @@ Flexible.Pagination = function(options){
                                             defaultOption.pagingControlsContainer+" ul{display:inline; padding-left: 0.2em} " +
                                             defaultOption.pagingControlsContainer+" li{display:inline; padding-left: 0.2em}" +
                                         "</style>";
-    defaultOption.css.btnNumberingClass = "btn btn-sm btn-info";
-    defaultOption.css.btnActiveClass = "btn btn-sm btn-primary";
-    defaultOption.css.btnDotClass = "btn btn-sm btn-danger";
+    defaultOption.css.btnNumberingClass = "btn btn-lg btn-huge btn-info";
+    defaultOption.css.btnActiveClass = "btn btn-lg btn-huge btn-primary";
+   
     defaultOption.css.btnFirstClass = defaultOption.css.btnNumberingClass;
     defaultOption.css.btnLastClass = defaultOption.css.btnNumberingClass;
     defaultOption.css.btnNextClass = defaultOption.css.btnNumberingClass;
@@ -272,10 +272,10 @@ Flexible.Pagination = function(options){
         
         if (displayedPages < numPages) {
             upTo = displayedPages - 2;
-            if (currentPage > 4) {
+            if (currentPage > 2) {
                 //Shift one down to allow the visibility of currently active page.
-                starting += (currentPage-4);
-                upTo += (currentPage-4);
+                starting += (currentPage-2);
+                upTo += (currentPage-2);
                 if (starting > maximumStartingPoint){
                     //Normalize any escalating starting points...and subsequently upTo
                     starting = maximumStartingPoint;

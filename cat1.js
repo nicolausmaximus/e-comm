@@ -24,7 +24,7 @@ function showInfo(data, tabletop) {
   }
 
   
-
+ 
   var flexiblePagination = $('#abc').flexiblePagination({
     pagingControlsContainer: "#pagingControls",
     pagingContainer: "#abc",
@@ -42,7 +42,7 @@ function showInfo(data, tabletop) {
   
     
   
-    displayedPages: 10,
+    displayedPages: 6,
   
     // Show/hide control buttons
     showGotoFirst: true,
@@ -51,10 +51,10 @@ function showInfo(data, tabletop) {
     showNext: true,
   
     // All text can accept an icon using a <span> OR <i> tag. 
-    btnFirstText: "First",
-    btnLastText: "Last",
-    btnNextText: "Next",
-    btnPreviousText: "Previous",
+    btnFirstText: "<<",
+    btnLastText: ">>",
+    btnNextText: ">",
+    btnPreviousText: "<",
   
     // CSS properties
     

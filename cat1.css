@@ -88,16 +88,20 @@ button:hover {
   margin-left: 60px;
 }
 #pagingControls{
-  padding-left: 18%;
+  padding-top: 100px;
+  padding-left:6% ;
   padding-bottom: 60px;
   display: inline-block;
 }
-
+.btn-huge{
+  padding:20px;
+ font-size: 30px;
+ font-weight: bolder;
+}
 .card {
   box-shadow: 8px 4px 8px 2px rgba(0, 0, 0, 0.5);
   margin-top: 20px;
   border: 10px solid white;
-
 }
 
 
@@ -123,8 +127,13 @@ button:hover {
 @media only screen and (min-width: 1024px) {
 
   #pagingControls{
-    padding-left: 25%;
-}
+    padding-left:27% ;
+  }
+  .btn-huge{
+    padding:15px;
+   font-size: 20px;
+   font-weight: bolder;
+  }
     }
 
     #myImg {
