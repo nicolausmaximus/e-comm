@@ -9,46 +9,42 @@ p{
     background-color:#1178c2;
     color:black;
     border-radius:0;
- }
-
- .navbar-custom .navbar-nav > li > a {
-    color:#eeeeee;
- }
+  }
+   .navbar-custom .navbar-nav > li > a {
+    color:#eeeeee;}
 
   .navbar-custom .navbar-nav > .active > a {
     color: #ffffff;
     background-color:transparent;
- }
- .navbar-custom .navbar-nav > li > a:hover,
- .navbar-custom .navbar-nav > li > a:focus,
- .navbar-custom .navbar-nav > .active > a:hover,
- .navbar-custom .navbar-nav > .active > a:focus,
- .navbar-custom .navbar-nav > .open >a {
-    text-decoration: none;
-    background-color: #d0f7d0;
+   }
+  .navbar-custom .navbar-nav > li > a:hover,
+  .navbar-custom .navbar-nav > li > a:focus,
+  .navbar-custom .navbar-nav > .active > a:hover,
+  .navbar-custom .navbar-nav > .active > a:focus,
+  .navbar-custom .navbar-nav > .open >a {
+     text-decoration: none;
+    background-color: #d0f7d0;  
     color: black;
- }
-
- .navbar-custom .navbar-brand {
+  }  
+  .navbar-custom .navbar-brand {
     color:#eeeeee;
- }
- .navbar-custom .navbar-toggle {
+   }
+  .navbar-custom .navbar-toggle {
     background-color:#eeeeee;
- }
- .navbar-custom .icon-bar {
-    background-color:#d0f7d0
-    color:black;
- }
-  /* for dropdowns only */
-  .navbar-custom .navbar-nav .dropdown-menu  {
+   }
+  .navbar-custom .icon-bar {
+    background-color:#d0f7d0;
+    color: black;
+   }
+   .navbar-custom .navbar-nav .dropdown-menu  {
   background-color: #d0f7d0;
-  }
-  .navbar-custom .navbar-nav .dropdown-menu>li>a  {
+   }
+   .navbar-custom .navbar-nav .dropdown-menu>li>a  {
   color: black;
-  }
-  .navbar-custom .navbar-nav .dropdown-menu>li>a:hover,.navbar-custom .navbar-nav .dropdown-menu>li>a:focus  {
+   }
+    .navbar-custom .navbar-nav .dropdown-menu>li>a:hover,.navbar-custom .navbar-nav .dropdown-menu>li>a:focus  {
   color: blue;
-  }
+   }
 
 .jumbo{
   background-color: #000;
@@ -91,6 +87,11 @@ button:hover {
 #abc{
   margin-left: 60px;
 }
+#pagingControls{
+  padding-left: 18%;
+  padding-bottom: 60px;
+  display: inline-block;
+}
 
 .card {
   box-shadow: 8px 4px 8px 2px rgba(0, 0, 0, 0.5);
@@ -121,6 +122,9 @@ button:hover {
 }
 @media only screen and (min-width: 1024px) {
 
+  #pagingControls{
+    padding-left: 25%;
+}
     }
 
     #myImg {
@@ -210,4 +214,8 @@ button:hover {
       .modal-content {
         width: 100%;
        }
+
+       
      }
+
+    

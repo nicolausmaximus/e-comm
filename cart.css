@@ -31,7 +31,7 @@ body {
 }
 
 .item {
-  padding: 20px 30px;
+  padding: 20px;
   height: 120px;
   display: flex;
 }
@@ -83,7 +83,6 @@ body {
   margin-right: 50px;
 }
 
-Let’s add some basic style to  product name and description.
 .description {
   padding-top: 10px;
   margin-right: 60px;
