@@ -31,8 +31,8 @@ Flexible.Pagination = function(options){
                                             defaultOption.pagingControlsContainer+" ul{display:inline; padding-left: 0.2em} " +
                                             defaultOption.pagingControlsContainer+" li{display:inline; padding-left: 0.2em}" +
                                         "</style>";
-    defaultOption.css.btnNumberingClass = "btn btn-lg btn-huge btn-info";
-    defaultOption.css.btnActiveClass = "btn btn-lg btn-huge btn-primary";
+    defaultOption.css.btnNumberingClass = "btn btn-lg btn-huge bi";
+    defaultOption.css.btnActiveClass = "btn btn-lg btn-huge bp";
    
     defaultOption.css.btnFirstClass = defaultOption.css.btnNumberingClass;
     defaultOption.css.btnLastClass = defaultOption.css.btnNumberingClass;

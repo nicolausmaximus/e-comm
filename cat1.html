@@ -2,16 +2,20 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-<link rel="stylesheet" href="cat1.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="cat1.css">
+  <link rel="stylesheet" href="cart.css">
     <title></title>
   </head>
   <body>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <script src="flexible.pagination.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="flexible.pagination.js"></script>
    
 
      
@@ -26,7 +30,7 @@
            <span class="icon-bar"></span>
            <span class="icon-bar"></span>
          </button>
-         <a class="navbar-brand" href="#">Brand</a>
+         <a class="navbar-brand" href="index.html">Home</a>
        </div>
 
        <!-- Collect the nav links, forms, and other content for toggling -->
@@ -35,11 +39,12 @@
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
+          <li><a href="cat1.html" id="cat11">1</a></li>
+          <li><a href="cat1.html" id="cat12">2</a></li>
+          <li><a href="cat1.html" id="cat13">3</a></li>
+          <li><a href="cat1.html" id="cat14">4</a></li>
+          <li><a href="cat1.html" id="cat15">5</a></li>
+          <li><a href="cat1.html" id="cat16">6</a></li>
         </ul>
       </li>
     </ul>
@@ -47,33 +52,60 @@
 
          <ul class="nav navbar-nav navbar-right">
            <li><a href="navbar-mydetails.html">My details</a></li>
-           <li><a href="cart.html">cart</a></li>
-         </ul>
+		  <li><button type="button" class="btn btn-lg cart" data-toggle="modal" data-target="#cart">Cart [<span class="total-count"></span>]</button></li>
+		 <li></li>
+		</ul>
        </div><!-- /.navbar-collapse -->
      </div><!-- /.container-fluid -->
    </nav>
 
          <div class="jumbo">
- <p>Welcome to Category 1</p>
+ 
            </div>
 
     <div class="container-fluid">
-     <ul id="dl"></ul>
 
 
-    
-            <div id="abc"></div>
-
-           
-           
-            <div id="pagingControls">
-       
+            <div id="abc">
             </div>
-       
+            <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                  <p></p>
+                  <button class="clear-cart btn btn-danger btn-sm">Clear Cart</button>
+                  
+                </div>
+                <div class="modal-body">
+                  <table class="show-cart table">
+                  
+                  </table>
+                  <div>Total price: ₹<span class="total-cart"></span></div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Order now</button>
+                </div>
+                </div>
+              </div>
+              </div> 
+    
+           
             
+			
+			
        
+        <div id="pagingControls"></div>
+            
+      </div>
        
-            <script src='cat1.js'></script>
+      <script src="index2.js"></script>
+			<script src='cat1.js'></script>
+		
 
 
   </body>

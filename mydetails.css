@@ -1,0 +1,21 @@
+.box{
+    background-color: #eeeeee;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 50%;
+    border-radius: 20px;
+}
+p{
+    font-size: 40px;
+}
+
+
+@media only screen 
+and (min-device-width: 640px)
+{ 
+
+    .box{
+        margin-top: 17%;
+    }
+ }
+
