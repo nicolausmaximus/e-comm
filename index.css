@@ -15,6 +15,12 @@
 .slick-slide {
   box-sizing: border-box;
   border: 10px solid #eeeeee;
+  
+}
+
+.slick-slide img{
+  width: 520px;
+  height: 353px;
 }
 
 
