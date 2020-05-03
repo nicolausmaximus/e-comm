@@ -1,33 +1,32 @@
 function init() {
-  console.log(sessionStorage["xyz"]);
   switch(sessionStorage["xyz"])
   {
-    case "1":console.log("1")
+    case "1":
              var tabletop = Tabletop.init( { key:'https://docs.google.com/spreadsheets/d/1oegQtX2uIk0hdNFPT1YW4KEnW1LSxCvO8BVpsO5kZYM/edit?usp=sharing',
              callback: showInfo,
              simpleSheet: true } )
              break;
-    case "2":console.log("2")
+    case "2":
             var tabletop = Tabletop.init( { key:'https://docs.google.com/spreadsheets/d/1TB8AKP9GRmU8hyLlHrVub-yhPpzzxmBAqAFcWUSJuJQ/edit?usp=sharing    ',
             callback: showInfo,
             simpleSheet: true } )
             break;
-    case "3":console.log("3")
+    case "3":
             var tabletop = Tabletop.init( { key:'https://docs.google.com/spreadsheets/d/108MHFbHuH8xNz6HyNSF5xUQVkOieega-xzPTi1zuvFo/edit?usp=sharing',
             callback: showInfo,
             simpleSheet: true } )
             break;
-    case "4":console.log("4")
+    case "4":
             var tabletop = Tabletop.init( { key:'https://docs.google.com/spreadsheets/d/1zsIJeOp94vnHP0pBVBNOdlHIdp59qS64ptTGz5lNQzk/edit?usp=sharing',
             callback: showInfo,
             simpleSheet: true } )
             break;
-    case "5":console.log("5")
+    case "5":
             var tabletop = Tabletop.init( { key:'https://docs.google.com/spreadsheets/d/1yf8SD1mtlo4vFEEjBw5B-tUMCfCuHibF0IkPJnQbzVE/edit?usp=sharing',
             callback: showInfo,
             simpleSheet: true } )
             break;
-    case "6":console.log("6")
+    case "6":
             var tabletop = Tabletop.init( { key:' https://docs.google.com/spreadsheets/d/1mPvNBj_Mti_sURltZbD-u4KZXkGdHWrBh9QhBn9JV-8/edit?usp=sharing ',
             callback: showInfo,
             simpleSheet: true } )
@@ -346,16 +345,9 @@ function addtocart(id,event) {
       event.preventDefault();
   
   var igg = document.getElementById(id);
-  console.log(igg);
-
   var price = igg.rel;
   var name = igg.name;
   var photo = igg.type;
-  console.log("inn");
-  console.log(price);
-  console.log(name);
-  
-  console.log(photo);
   window.shoppingCart.addItemToCart(name, price, 1,photo);
   window.displayCart();
 

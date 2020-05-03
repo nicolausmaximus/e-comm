@@ -3,13 +3,11 @@ sessionStorage["xyz"] = 0;
 img1=document.getElementById("cat1");
 img1.addEventListener("click", function(){
     sessionStorage["xyz"] = 1;
-    console.log("1 click");
 });
 
 img2=document.getElementById("cat2");
 img2.addEventListener("click", function(){
     sessionStorage["xyz"] = 2;
-    console.log("2 click");
 });
 
 img3=document.getElementById("cat3");

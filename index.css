@@ -7,6 +7,7 @@
 
 
 .cont2{
+  margin-top: 50px;
   margin-bottom: 50px;
   color: #eeeeee;
 }
@@ -42,5 +43,11 @@
 
 .slick-dots li button:before {
   font-size: 16px;
+  color:white;
+  opacity: 0.6;
 }
  
+.slick-dots li.slick-active button:before {
+  color:#cab05c;
+  opacity: 0.6;
+}
