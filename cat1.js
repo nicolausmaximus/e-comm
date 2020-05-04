@@ -200,6 +200,88 @@ window.shoppingCart = (function() {
     saveCart();
   }
 
+  obj.submit = function() {
+    var x = document.getElementById("form_sample");
+    var createform = document.createElement('form'); 
+    createform.setAttribute("id" , "form-trial");
+    x.appendChild(createform);
+
+   
+    var random=Math.floor((Math.random()*20) );
+
+    for(var item in cart) 
+    {
+      var idlabel = document.createElement('label'); // Create Label for Name Field
+      idlabel.innerHTML = "Order id : "; // Set Field Labels
+      createform.appendChild(idlabel);
+      var ORDERID = document.createElement('input'); // Create Input Field for Name
+      ORDERID.setAttribute("type", "text");
+      ORDERID.setAttribute("name", "id");
+      ORDERID.setAttribute("id", "ids"+item);
+      createform.appendChild(ORDERID);
+      document.getElementById('ids'+item).value=document.getElementById("ID").value+"_"+random;
+      var linebreak = document.createElement('br');
+      createform.appendChild(linebreak);
+
+      var namelabel = document.createElement('label'); // Create Label for Name Field
+      namelabel.innerHTML = "Name : "; // Set Field Labels
+      createform.appendChild(namelabel);
+      var NAME = document.createElement('input'); // Create Input Field for Name
+      NAME.setAttribute("type", "text");
+      NAME.setAttribute("name", "name");
+      NAME.setAttribute("id", "names"+item);
+      createform.appendChild(NAME);
+      document.getElementById('names'+item).value=cart[item].name;
+      var linebreak = document.createElement('br');
+      createform.appendChild(linebreak);
+
+      var pricelabel = document.createElement('label'); // Create Label for Name Field
+      pricelabel.innerHTML = "Price : "; // Set Field Labels
+      createform.appendChild(pricelabel);
+      var PRICE = document.createElement('input'); // Create Input Field for Name
+      PRICE.setAttribute("type", "text");
+      PRICE.setAttribute("name", "price");
+      PRICE.setAttribute("id", "prices"+item);
+      createform.appendChild(PRICE);
+      document.getElementById('prices'+item).value=cart[item].price;
+      var linebreak = document.createElement('br');
+      createform.appendChild(linebreak);
+
+      var countlabel = document.createElement('label'); // Create Label for Name Field
+      countlabel.innerHTML = "Count : "; // Set Field Labels
+      createform.appendChild(countlabel);
+      var COUNT = document.createElement('input'); // Create Input Field for Name
+      COUNT.setAttribute("type", "text");
+      COUNT.setAttribute("name", "count");
+      COUNT.setAttribute("id", "counts"+item);
+      createform.appendChild(COUNT);
+      document.getElementById('counts'+item).value=cart[item].count;
+      var linebreak = document.createElement('br');
+      createform.appendChild(linebreak);
+
+      var photolabel = document.createElement('label'); // Create Label for Name Field
+      photolabel.innerHTML = "photo : "; // Set Field Labels
+      createform.appendChild(photolabel);
+      var PHOTO = document.createElement('input'); // Create Input Field for Name
+      PHOTO.setAttribute("type", "text");
+      PHOTO.setAttribute("name", "photo");
+      PHOTO.setAttribute("id", "photos"+item);
+      createform.appendChild(PHOTO);
+      document.getElementById('photos'+item).value=cart[item].photo;
+      var linebreak = document.createElement('br');
+      createform.appendChild(linebreak);
+
+      var jqxhr = $.ajax({
+        url: 'https://script.google.com/macros/s/AKfycbxi_h6SgUshpSfDAMpD0ZwuziQL616NgZdTQfCfTcPrCaPBhMU/exec',
+        method: "GET",
+        dataType: "json",
+        data: $('#form-trial').serializeObject()
+       })
+    }  
+     (alert("your order is confirmed \n Order id:"+document.getElementById('ids0').value));
+
+  }
+
   // Count cart 
   obj.totalCount = function() {
     var totalCount = 0;
@@ -259,9 +341,15 @@ $('.clear-cart').click(function() {
   window.displayCart();
 });
 
+$('.ordernow').click(function(e) {
+  e.preventDefault();
+  window.shoppingCart.submit();
+});
+
+
+
 
 window.displayCart=function() {
-  
   var cartArray = window.shoppingCart.listCart();
   var output = "";
   for(var i in cartArray) {
@@ -345,6 +433,7 @@ function addtocart(id,event) {
       event.preventDefault();
   
   var igg = document.getElementById(id);
+  console.log(igg);
   var price = igg.rel;
   var name = igg.name;
   var photo = igg.type;

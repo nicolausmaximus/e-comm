@@ -14,3 +14,7 @@
 		display: flex;
 	  }
 	  
+#form-trial{
+	visibility: hidden;
+	font-size: 0;
+}
