@@ -66,3 +66,39 @@
    border-radius:0;
    height: 50px;
 }
+
+
+
+@media only screen 
+and (max-device-width: 640px)
+{ 
+
+   .navbar-custom ,.navbar-brand{
+      height: 70px;
+      font-size: 40px;
+   }
+   p{
+      text-align: center;
+      margin-top: 70px;
+      font-size: 55px;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+    }
+   
+    .cart{
+      background-color:#b0a16e;
+      color: #eeeeee;
+      border-radius:0;
+      height: 70px;
+      font-size: 40px;
+   }
+   .navbar-nav > li > a ,.navbar-brand{
+      padding-top: 0px;
+      padding-bottom: 0px;
+      line-height: 70px;
+  }
+  .dropdown-menu{
+     font-size: 30px;
+     width: 245px;
+  }
+ }
+

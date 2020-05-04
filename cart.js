@@ -92,19 +92,15 @@ window.shoppingCart = (function() {
       x.appendChild(createform);
   
      
-      var random=Math.floor((Math.random()*20) );
-  
-      for(var item in cart) 
-      {
+      var random=Math.floor((Math.random()*999) );
         var idlabel = document.createElement('label'); // Create Label for Name Field
         idlabel.innerHTML = "Order id : "; // Set Field Labels
         createform.appendChild(idlabel);
         var ORDERID = document.createElement('input'); // Create Input Field for Name
         ORDERID.setAttribute("type", "text");
         ORDERID.setAttribute("name", "id");
-        ORDERID.setAttribute("id", "ids"+item);
+        ORDERID.setAttribute("id", "ids");
         createform.appendChild(ORDERID);
-        document.getElementById('ids'+item).value=document.getElementById("ID").value+"_"+random;
         var linebreak = document.createElement('br');
         createform.appendChild(linebreak);
   
@@ -114,9 +110,8 @@ window.shoppingCart = (function() {
         var NAME = document.createElement('input'); // Create Input Field for Name
         NAME.setAttribute("type", "text");
         NAME.setAttribute("name", "name");
-        NAME.setAttribute("id", "names"+item);
+        NAME.setAttribute("id", "names");
         createform.appendChild(NAME);
-        document.getElementById('names'+item).value=cart[item].name;
         var linebreak = document.createElement('br');
         createform.appendChild(linebreak);
   
@@ -126,9 +121,8 @@ window.shoppingCart = (function() {
         var PRICE = document.createElement('input'); // Create Input Field for Name
         PRICE.setAttribute("type", "text");
         PRICE.setAttribute("name", "price");
-        PRICE.setAttribute("id", "prices"+item);
+        PRICE.setAttribute("id", "prices");
         createform.appendChild(PRICE);
-        document.getElementById('prices'+item).value=cart[item].price;
         var linebreak = document.createElement('br');
         createform.appendChild(linebreak);
   
@@ -138,9 +132,8 @@ window.shoppingCart = (function() {
         var COUNT = document.createElement('input'); // Create Input Field for Name
         COUNT.setAttribute("type", "text");
         COUNT.setAttribute("name", "count");
-        COUNT.setAttribute("id", "counts"+item);
+        COUNT.setAttribute("id", "counts");
         createform.appendChild(COUNT);
-        document.getElementById('counts'+item).value=cart[item].count;
         var linebreak = document.createElement('br');
         createform.appendChild(linebreak);
   
@@ -150,20 +143,42 @@ window.shoppingCart = (function() {
         var PHOTO = document.createElement('input'); // Create Input Field for Name
         PHOTO.setAttribute("type", "text");
         PHOTO.setAttribute("name", "photo");
-        PHOTO.setAttribute("id", "photos"+item);
+        PHOTO.setAttribute("id", "photos");
         createform.appendChild(PHOTO);
-        document.getElementById('photos'+item).value=cart[item].photo;
         var linebreak = document.createElement('br');
         createform.appendChild(linebreak);
+      for(var item in cart) 
+      {
+        
+        document.getElementById('ids').value=document.getElementById("ID").value+"_"+random;
+        
   
-        var jqxhr = $.ajax({
-          url: 'https://script.google.com/macros/s/AKfycbxi_h6SgUshpSfDAMpD0ZwuziQL616NgZdTQfCfTcPrCaPBhMU/exec',
-          method: "GET",
-          dataType: "json",
-          data: $('#form-trial').serializeObject()
-         })
+        
+        document.getElementById('names').value=document.getElementById('names').value+cart[item].name+" , ";
+       
+  
+        
+        document.getElementById('prices').value= document.getElementById('prices').value+cart[item].price+" , ";
+       
+  
+        
+        document.getElementById('counts').value=document.getElementById('counts').value+cart[item].count+" , " ;
+        
+  
+       
+        document.getElementById('photos').value=document.getElementById('photos').value+cart[item].photo+" , " ;
+        
       }  
-       (alert("your order is confirmed \n Order id:"+document.getElementById('ids0').value));
+      var jqxhr = $.ajax({
+        url: 'https://script.google.com/macros/s/AKfycbxi_h6SgUshpSfDAMpD0ZwuziQL616NgZdTQfCfTcPrCaPBhMU/exec',
+        method: "GET",
+        dataType: "json",
+        data: $('#form-trial').serializeObject()
+      })
+       alert("Your order is confirmed \n Order id:"+document.getElementById('ids').value);
+       window.shoppingCart.clearCart();
+       window.displayCart();
+       createform.parentNode.removeChild(createform);
   
     }
   
@@ -243,7 +258,6 @@ window.shoppingCart = (function() {
   
   
   window.displayCart=function() {
-    
     var cartArray = window.shoppingCart.listCart();
     var output = "";
     for(var i in cartArray) {
@@ -253,8 +267,7 @@ window.shoppingCart = (function() {
         + "<td><div class='input-group'><span class='input-group-btn'><button class='btn btn-primary minus-item' data-name=" + cartArray[i].name + ">-</button></span>"
         + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
         + "<span class='input-group-btn'><button type='button' class='btn btn-success plus-item ' data-name=" + cartArray[i].name + ">+</button></span></div></td>"
-        + " = " 
-        + "<td> &emsp; &emsp; Total=" + cartArray[i].total + "</td>" 
+        + " = "  + "<td> &nbsp;&nbsp;₹" + cartArray[i].total + "</td>" 
         + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
         + "<td><img src=" +cartArray[i].photo+ " height='100' width='100'></td>"
         +  "</tr>";
@@ -263,6 +276,7 @@ window.shoppingCart = (function() {
     $('.total-cart').html(window.shoppingCart.totalCart());
     $('.total-count').html(window.shoppingCart.totalCount());
   }
+  
   
   // Delete item button
   

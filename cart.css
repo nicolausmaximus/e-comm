@@ -19,3 +19,24 @@
 	font-size: 0;
 	opacity: 0;
 }
+
+
+@media only screen and (max-device-width: 600px){
+ 
+ #cart .modal-lg {
+	 font-size: 20px;
+	 width: 90%;
+ }
+
+ #cart .modal-title{
+	 font-size: 30px;
+ }
+ #cart .modal-lg .modal-content .modal-header .close{
+	 font-size: 60px;
+ }
+ .ordernow ,.close-cart,.clear-cart{
+	 width: 100px;
+	 height: 40px;
+	 font-size: 17px;
+ }
+}

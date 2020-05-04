@@ -32,6 +32,16 @@
 
 }
 
+@media only screen 
+and (max-device-width: 640px)
+{ .withOptions{
+  margin-top: 150px;
+  width: 100%;
+
+}
+}
+
+
 .col-lg-4{
   position: relative;
   font-family: "Comic Sans MS", cursive, sans-serif;
