@@ -433,7 +433,6 @@ function addtocart(id,event) {
       event.preventDefault();
   
   var igg = document.getElementById(id);
-  console.log(igg);
   var price = igg.rel;
   var name = igg.name;
   var photo = igg.type;
