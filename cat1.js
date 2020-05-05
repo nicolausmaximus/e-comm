@@ -290,7 +290,7 @@ window.shoppingCart = (function() {
       dataType: "json",
       data: $('#form-trial').serializeObject()
     })
-     alert("Your order is confirmed \n Order id:"+document.getElementById('ids').value);
+     alert("Your order is confirmed \n Please Contact 8600000000 \nOrder id:"+document.getElementById('ids').value);
      window.shoppingCart.clearCart();
      window.displayCart();
      createform.parentNode.removeChild(createform);

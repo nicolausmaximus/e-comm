@@ -51,8 +51,13 @@
     text-align: center;
     margin-top: 50px;
     font-size: 55px;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
   }
+
+  @font-face {
+   font-family: 'Comic Sans MS';
+   src: url("comic-sans-ms/COMIC.TTF");
+ }
   .jumbo{
    background-color:#b0a16e;
     width: 100%;
