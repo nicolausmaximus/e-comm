@@ -75,7 +75,7 @@
 
 
 @media only screen 
-and (max-device-width: 600px)
+and (max-device-width: 60px)
 { 
 
    .navbar-custom ,.navbar-brand{
