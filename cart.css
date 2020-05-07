@@ -20,12 +20,15 @@
 	opacity: 0;
 }
 
-
 @media only screen and (max-device-width: 600px){
  
  #cart .modal-lg {
 	 font-size: 20px;
+	 margin-top: 40%;
 	 width: 90%;
+ }
+ .entername{
+	 font-size: 30px;
  }
 
  #cart .modal-title{
