@@ -1,13 +1,13 @@
 .add-to-cart {
 	padding:0;
-    font-weight: 700;
+    font-weight: 200;
 	   border-radius:0;
-	   color: white;
+	   color:#eeeeee;
 	  background-color: #000;
 	  text-align: center;
 	  width: 100%;
-  font-family: 'Dancing Script', cursive;
-  font-size: 25px;
+	  font-family: 'Lobster', cursive;
+	  font-size: 30px;
   }
   
   .show-cart li {

@@ -52,7 +52,7 @@ function showInfo(data, tabletop) {
     
 
     $(headOne).append('<div class="col-lg-4 col-md-6 col-xs-6"><div class="row"><div class="column"><div class="card"><img  id='
-    +i+' onclick="imfun(id)" src='+x+' ><div class="contx"><a href="#"  data-name='+y+' data-price='+  Math.floor((Math.random() + 2*i)*100 ) +' data-photo='+x+' name='+y+' rel='+  Math.floor((Math.random() + 2*i)*100 ) +' type='+x+' class="add-to-cart btn" id='+"button"+i+' onclick="addtocart(id,event)" >add to cart</a></div><div id="myModal" class="modal"><span class="close">&times;</span><img class="modal-content" id="img"><div id="caption"></div></div></div></div></div></div>');
+    +i+' onclick="imfun(id)" src='+x+' ><div class="contx"><a href="#"  data-name='+y+' data-price='+  Math.floor((Math.random() + 2*i)*100 ) +' data-photo='+x+' name='+y+' rel='+  Math.floor((Math.random() + 2*i)*100 ) +' type='+x+' class="add-to-cart btn" id='+"button"+i+' onclick="addtocart(id,event)" >Add to cart</a></div><div id="myModal" class="modal"><span class="close">&times;</span><img class="modal-content" id="img"><div id="caption"></div></div></div></div></div></div>');
 
   }
   

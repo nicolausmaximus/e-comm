@@ -49,19 +49,19 @@
 
   p{
     text-align: center;
-    margin-top: 50px;
+    margin-top: 35px;
     font-size: 55px;
-    font-family: 'Comic Sans MS';
-  }
+    font-family: 'Concert One', cursive;     
+   }
 
-  @font-face {
-   font-family: 'Comic Sans MS';
-   src: url("comic-sans-ms/COMIC.TTF");
- }
+   h4{
+      font-family: 'Concert One', cursive;     
+   }
+
   .jumbo{
    background-color:#b0a16e;
     width: 100%;
-    height: 80px;
+    height: 90px;
     color: white;
 
   }
@@ -84,16 +84,17 @@ and (max-device-width: 640px)
    }
    p{
       text-align: center;
-      margin-top: 70px;
-      font-size: 55px;
-      font-family: 'Comic Sans MS';
-    }
-
-    @font-face {
-      font-family: 'Comic Sans MS';
-      src: url("comic-sans-ms/COMIC.TTF");
-    }
+      margin-top: 50px;
+      font-size: 60px;
+      font-family: 'Concert One', cursive;
+   }
+   .jumbo{
+      background-color:#b0a16e;
+       width: 100%;
+       height: 100px;
+       color: white;
    
+     }   
     .cart{
       background-color:#b0a16e;
       color: #eeeeee;
