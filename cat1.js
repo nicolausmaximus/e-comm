@@ -39,7 +39,7 @@ function init() {
 
 function showInfo(data, tabletop) {
   var head=document.querySelector('.jumbo')
-             $(head).append('<p>Welcome to Category '+ sessionStorage["xyz"] +'</p>');
+             $(head).append('<p class="catal">Welcome to Category '+ sessionStorage["xyz"] +'</p>');
   
   for (var i = 0; i < data.length; i++) {
     x = tabletop.data()[i].photo ;

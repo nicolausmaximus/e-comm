@@ -13,13 +13,16 @@
 
   </head>
   <body>
-
     <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="submit.js"></script>
+        <script src="submit.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <script>
+        $(document).ready(function(){
+          $("#greeting").modal('show');
+        });
+      </script>
 
     <nav class="navbar navbar-custom navbar-fixed-top">
       <div class="container-fluid">
@@ -73,7 +76,7 @@
   
 
     <div class="container-fluid cont2">
-      <p>Catalogue</p>
+      <p class="catal">Catalogue</p>
         <div class="row" >
           <div class="col-lg-4 col-xs-12"><a href="cat1.html" >
             <img class="img-thumbnail " src="https://images.pexels.com/photos/594137/pexels-photo-594137.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" id="cat1" alt="" ><div class="text-block">
@@ -137,7 +140,35 @@
 
       <div id="form_sample"></div>
 
-  
+      <div id="greeting" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <div class="modal-title">
+                    <h3>Hey!</h3>
+                    <h4>We're super excited to have you on board</h4>
+                    </div>
+                </div>
+                <div class="modal-body">
+            <p>WELCOME TO GURUJI JEWELLERS.WE PROMISE TO PROVIDE YOU WITH AN ENRICHING SHOPPING EXPERIENCE, KEEP YOU UP-TO-DATE WITH THE SWEETEST NEW SEASON STYLES, TELL YOU ABOUT OUR AWESOME SALES AND THROW IN THE ODD SURPRISE AND SPECIAL OFFERS. </p>
+                    <p>* FROM THE CATALOGUE AVAILABLE , SELECT THE ITEM THAT YOU WANT,CLICK ON THE IMAGE TO VIEW ALL THE AVAILABLE OPTIONS.THIS CAN BE DONE USING THE NAV-BAR AND THE SLIDESHOW AS WELL:)</p>
+                    <p>* TO BUY A PRODUCT,JUST CLICK ON THE 'ADD TO CART' BUTTON , THAT PRODUCT WILL BE ADDED TO THE CART AND TO ENLARGE AN IMAGE, JUST CLICK ON IT.
+                    </p>
+                    <p>* TO VIEW YOUR CART, CLICK ON THE 'CART' BUTTON WHICH IS PRESENT ON THE UPPER RIGHT CORNER OF YOUR SCREEN.</p>
+                    <p>* TO PLACE YOUR ORDER, WRITE YOUR NAME IN THE DIALOG BOX AND CLICK ON THE 'ORDER NOW' BUTTON. THAT'S IT.</p>
+                    <p>WITHOUT FURTHER ADO, LET'S GET STARTED</p>
+                        </div>
+            
+                        <div class="modal-footer">
+            <button type="button" class="btn btn-primary cart" data-dismiss="modal">Close</button>
+          </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
  <script src="cart.js"></script>
  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
  <script src="index.js"></script>

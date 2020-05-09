@@ -31,6 +31,25 @@
   width: 100%;
 
 }
+#greeting .modal-content{
+background-color: #141414;
+color: #eeeeee;
+font-family: 'Concert One', cursive;
+font-size: larger;
+}
+
+#greeting .modal-content .modal-header{
+  background-color: #b0a16e;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+#greeting .modal-content .cart{
+  height: 40px;
+  font-size: 20px;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
 
 @media only screen 
 and (max-device-width: 640px)
@@ -39,6 +58,12 @@ and (max-device-width: 640px)
   width: 100%;
 
 }
+#greeting{
+  margin-top: 30%;
+}
+
+
+
 }
 
 

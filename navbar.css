@@ -47,7 +47,7 @@
     background:#141414;
   }
 
-  p{
+   .catal{
     text-align: center;
     margin-top: 35px;
     font-size: 55px;
@@ -82,7 +82,7 @@ and (max-device-width: 640px)
       height: 70px;
       font-size: 40px;
    }
-   p{
+   .catal{
       text-align: center;
       margin-top: 50px;
       font-size: 60px;
@@ -93,7 +93,6 @@ and (max-device-width: 640px)
        width: 100%;
        height: 100px;
        color: white;
-   
      }   
     .cart{
       background-color:#b0a16e;
