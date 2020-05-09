@@ -59,3 +59,7 @@ cat26=document.getElementById("slick-slide05");
 cat26.addEventListener("click", function(){
     sessionStorage["xyz"] = 6;
 });
+
+
+
+  window.addEventListener('DOMContentLoaded', window.myFunc);

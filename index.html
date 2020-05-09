@@ -19,9 +19,7 @@
         <script src="submit.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
       <script>
-        $(document).ready(function(){
-          $("#greeting").modal('show');
-        });
+        window.myFunc = function(){      $("#greeting").modal('show');};  
       </script>
 
     <nav class="navbar navbar-custom navbar-fixed-top">
@@ -34,7 +32,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Home</a>
+          <a class="navbar-brand" id="homenavbar" href="index.html">Home</a>
         </div>
  
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -161,13 +159,14 @@
                         </div>
             
                         <div class="modal-footer">
-            <button type="button" class="btn btn-primary cart" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary cart" id="closes" data-dismiss="modal">Close</button>
           </div>
                     
                 </div>
             </div>
         </div>
-    </div>
+      
+    
     
  <script src="cart.js"></script>
  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
