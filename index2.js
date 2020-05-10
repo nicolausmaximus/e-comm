@@ -72,6 +72,41 @@ cat26.addEventListener("click", function(){
     sessionStorage["pqr"]= "RINGS";
 });
 
+cat31=document.getElementById("cat31");
+cat31.addEventListener("click", function(){
+    sessionStorage["xyz"] = 1;
+    sessionStorage["pqr"]= "BANGLES";
+});
+
+cat32=document.getElementById("cat32");
+cat32.addEventListener("click", function(){
+    sessionStorage["xyz"] = 2;
+    sessionStorage["pqr"]= "BRACELETS";
+});
+
+cat33=document.getElementById("cat33");
+cat33.addEventListener("click", function(){
+    sessionStorage["xyz"] = 3;
+    sessionStorage["pqr"]= "EARRINGS";
+});
+
+cat34=document.getElementById("cat34");
+cat34.addEventListener("click", function(){
+    sessionStorage["xyz"] = 4;
+    sessionStorage["pqr"]= "NECKLACES";
+});
+
+cat35=document.getElementById("cat35");
+cat35.addEventListener("click", function(){
+    sessionStorage["xyz"] = 5;
+    sessionStorage["pqr"]= "PENDANT SETS";
+});
+
+cat36=document.getElementById("cat36");
+cat36.addEventListener("click", function(){
+    sessionStorage["xyz"] = 6;
+    sessionStorage["pqr"]= "RINGS";
+});
 
 
   window.addEventListener('DOMContentLoaded', window.myFunc);
