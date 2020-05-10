@@ -2,32 +2,32 @@ function init() {
   switch(sessionStorage["xyz"])
   {
     case "1":
-             var tabletop = Tabletop.init( { key:'https://docs.google.com/spreadsheets/d/1oegQtX2uIk0hdNFPT1YW4KEnW1LSxCvO8BVpsO5kZYM/edit?usp=sharing',
+             var tabletop = Tabletop.init( { key:'https://docs.google.com/spreadsheets/d/1wnTR9kZUW6ITBN-IDs5dGqkZrTuO3TTvnctAVhvZBlc/edit?usp=sharing',
              callback: showInfo,
              simpleSheet: true } )
              break;
     case "2":
-            var tabletop = Tabletop.init( { key:'https://docs.google.com/spreadsheets/d/1TB8AKP9GRmU8hyLlHrVub-yhPpzzxmBAqAFcWUSJuJQ/edit?usp=sharing    ',
+            var tabletop = Tabletop.init( { key:'https://docs.google.com/spreadsheets/d/1iIduHzkAwU6Zv5xNtUip1seIucbNe6kigd7wOFZBkik/edit?usp=sharing',
             callback: showInfo,
             simpleSheet: true } )
             break;
     case "3":
-            var tabletop = Tabletop.init( { key:'https://docs.google.com/spreadsheets/d/108MHFbHuH8xNz6HyNSF5xUQVkOieega-xzPTi1zuvFo/edit?usp=sharing',
+            var tabletop = Tabletop.init( { key:'https://docs.google.com/spreadsheets/d/1SRkKLJ-cPXmwOrHiHSlgpkqWkbKr4t6mjBt0YaEvGoI/edit?usp=sharing',
             callback: showInfo,
             simpleSheet: true } )
             break;
     case "4":
-            var tabletop = Tabletop.init( { key:'https://docs.google.com/spreadsheets/d/1zsIJeOp94vnHP0pBVBNOdlHIdp59qS64ptTGz5lNQzk/edit?usp=sharing',
+            var tabletop = Tabletop.init( { key:'https://docs.google.com/spreadsheets/d/1MzRXIWUl2z1NgMpnoEKREaaCJUtoMwfxElH_sxu6H5o/edit?usp=sharing',
             callback: showInfo,
             simpleSheet: true } )
             break;
     case "5":
-            var tabletop = Tabletop.init( { key:'https://docs.google.com/spreadsheets/d/1yf8SD1mtlo4vFEEjBw5B-tUMCfCuHibF0IkPJnQbzVE/edit?usp=sharing',
+            var tabletop = Tabletop.init( { key:'https://docs.google.com/spreadsheets/d/1nU-65ADAOxyjdLdiZZjf9QoWvIsewPwPFpDINMUMrDA/edit?usp=sharing',
             callback: showInfo,
             simpleSheet: true } )
             break;
     case "6":
-            var tabletop = Tabletop.init( { key:' https://docs.google.com/spreadsheets/d/1mPvNBj_Mti_sURltZbD-u4KZXkGdHWrBh9QhBn9JV-8/edit?usp=sharing ',
+            var tabletop = Tabletop.init( { key:'https://docs.google.com/spreadsheets/d/1EwpeRiqhimwN7P-c9bNQY8ZY_oLFJIWni9dUAbzNP-E/edit?usp=sharing',
             callback: showInfo,
             simpleSheet: true } )
             break;
@@ -39,7 +39,7 @@ function init() {
 
 function showInfo(data, tabletop) {
   var head=document.querySelector('.jumbo')
-             $(head).append('<p class="catal">Welcome to Category '+ sessionStorage["xyz"] +'</p>');
+             $(head).append('<p class="catal">'+ sessionStorage["pqr"] +'</p>');
   
   for (var i = 0; i < data.length; i++) {
     x = tabletop.data()[i].photo ;
@@ -52,7 +52,7 @@ function showInfo(data, tabletop) {
     
 
     $(headOne).append('<div class="col-lg-4 col-md-6 col-xs-6"><div class="row"><div class="column"><div class="card"><img  id='
-    +i+' onclick="imfun(id)" src='+x+' ><div class="contx"><a href="#"  data-name='+y+' data-price='+  Math.floor((Math.random() + 2*i)*100 ) +' data-photo='+x+' name='+y+' rel='+  Math.floor((Math.random() + 2*i)*100 ) +' type='+x+' class="add-to-cart btn" id='+"button"+i+' onclick="addtocart(id,event)" >Add to cart</a></div><div id="myModal" class="modal"><span class="close">&times;</span><img class="modal-content" id="img"><div id="caption"></div></div></div></div></div></div>');
+    +i+' class="displayimg" onclick="imfun(id)" src='+x+' ><div class="contx"><a href="#"  data-name='+y+' data-price='+  Math.floor((Math.random() + 2*i)*100 ) +' data-photo='+x+' name='+y+' rel='+  Math.floor((Math.random() + 2*i)*100 ) +' type='+x+' class="add-to-cart btn" id='+"button"+i+' onclick="addtocart(id,event)" >Add to cart</a></div><div id="myModal" class="modal"><span class="close">&times;</span><img class="modal-content" id="img"><div id="caption"></div></div></div></div></div></div>');
 
   }
   

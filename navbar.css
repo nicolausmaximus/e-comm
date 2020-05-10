@@ -42,6 +42,8 @@
      background-color: #eeeeee;
   color: black;
   }
+
+  
   body{
     border-top: 0px;
     background:#141414;
@@ -94,6 +96,11 @@ and (max-device-width: 640px)
        height: 100px;
        color: white;
      }   
+     .caret{
+      border-top: 10px dashed;
+     border-right: 10px solid transparent;
+     border-left: 10px solid transparent;
+   }
     .cart{
       background-color:#b0a16e;
       color: #eeeeee;

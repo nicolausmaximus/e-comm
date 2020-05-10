@@ -34,7 +34,8 @@
 #greeting .modal-content{
 background-color: #141414;
 color: #eeeeee;
-font-family: 'Concert One', cursive;
+font-family: 'Balsamiq Sans', cursive;
+font-weight: 500;
 font-size: larger;
 }
 
