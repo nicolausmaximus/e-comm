@@ -53,7 +53,9 @@ font-size: larger;
 #greeting .modal-content .modal-footer{
   padding-top: 0px;
 }
-
+#greeting  .modal-dialog {
+  width: 800px;
+}
 
 @media only screen 
 and (max-device-width: 640px)
