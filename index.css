@@ -2,7 +2,7 @@
  width: 80%;
  margin-left: 10%;
  margin-top: 45px;
- 
+ height: 230px;
 }
 
 
@@ -56,6 +56,15 @@ font-size: larger;
 #greeting  .modal-dialog {
   width: 800px;
 }
+.text-block {
+  position: absolute;
+  bottom: 5px;
+  right: 20px;
+  background-color:#55523c;
+  color:#eeeeee;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
 @media only screen 
 and (max-device-width: 640px)
@@ -76,6 +85,21 @@ and (max-device-width: 640px)
   font-size: 30px;
   margin-bottom: 10px;
 }
+.container-fluid .img-thumbnail{
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 85px;
+  height: 230px;
+ }
+ .text-block {
+  position: absolute;
+  bottom: 5px;
+  right: 50px;
+  background-color:#55523c;
+  color:#eeeeee;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
 
 }
@@ -85,15 +109,7 @@ and (max-device-width: 640px)
   position: relative;
   font-family: 'Concert One', cursive;  
 }
-.text-block {
-  position: absolute;
-  bottom: 5px;
-  right: 20px;
-  background-color:#55523c;
-  color:#eeeeee;
-  padding-left: 20px;
-  padding-right: 20px;
-}
+
 .text-block h3{
   margin-top: 2px;
 }
