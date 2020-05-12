@@ -2,48 +2,42 @@ function init() {
   switch (sessionStorage["xyz"]) {
     case "1":
       var tabletop = Tabletop.init({
-        key:
-          "https://docs.google.com/spreadsheets/d/1wnTR9kZUW6ITBN-IDs5dGqkZrTuO3TTvnctAVhvZBlc/edit?usp=sharing",
+        key:"https://docs.google.com/spreadsheets/d/1wnTR9kZUW6ITBN-IDs5dGqkZrTuO3TTvnctAVhvZBlc/edit?usp=sharing",
         callback: showInfo,
         simpleSheet: true,
       });
       break;
     case "2":
       var tabletop = Tabletop.init({
-        key:
-          "https://docs.google.com/spreadsheets/d/1iIduHzkAwU6Zv5xNtUip1seIucbNe6kigd7wOFZBkik/edit?usp=sharing",
+        key:"https://docs.google.com/spreadsheets/d/1iIduHzkAwU6Zv5xNtUip1seIucbNe6kigd7wOFZBkik/edit?usp=sharing",
         callback: showInfo,
         simpleSheet: true,
       });
       break;
     case "3":
       var tabletop = Tabletop.init({
-        key:
-          "https://docs.google.com/spreadsheets/d/1SRkKLJ-cPXmwOrHiHSlgpkqWkbKr4t6mjBt0YaEvGoI/edit?usp=sharing",
+        key:"https://docs.google.com/spreadsheets/d/1SRkKLJ-cPXmwOrHiHSlgpkqWkbKr4t6mjBt0YaEvGoI/edit?usp=sharing",
         callback: showInfo,
         simpleSheet: true,
       });
       break;
     case "4":
       var tabletop = Tabletop.init({
-        key:
-          "https://docs.google.com/spreadsheets/d/1MzRXIWUl2z1NgMpnoEKREaaCJUtoMwfxElH_sxu6H5o/edit?usp=sharing",
+        key:"https://docs.google.com/spreadsheets/d/1MzRXIWUl2z1NgMpnoEKREaaCJUtoMwfxElH_sxu6H5o/edit?usp=sharing",
         callback: showInfo,
         simpleSheet: true,
       });
       break;
     case "5":
       var tabletop = Tabletop.init({
-        key:
-          "https://docs.google.com/spreadsheets/d/1nU-65ADAOxyjdLdiZZjf9QoWvIsewPwPFpDINMUMrDA/edit?usp=sharing",
+        key:"https://docs.google.com/spreadsheets/d/1nU-65ADAOxyjdLdiZZjf9QoWvIsewPwPFpDINMUMrDA/edit?usp=sharing",
         callback: showInfo,
         simpleSheet: true,
       });
       break;
     case "6":
       var tabletop = Tabletop.init({
-        key:
-          "https://docs.google.com/spreadsheets/d/1EwpeRiqhimwN7P-c9bNQY8ZY_oLFJIWni9dUAbzNP-E/edit?usp=sharing",
+        key:"https://docs.google.com/spreadsheets/d/1EwpeRiqhimwN7P-c9bNQY8ZY_oLFJIWni9dUAbzNP-E/edit?usp=sharing",
         callback: showInfo,
         simpleSheet: true,
       });
@@ -54,6 +48,7 @@ function init() {
 function showInfo(data, tabletop) {
   var head = document.querySelector(".jumbo");
   $(head).append('<p class="catal">' + sessionStorage["pqr"] + "</p>");
+  names=sessionStorage["pqr"]
 
   for (var i = 0; i < data.length; i++) {
     x = tabletop.data()[i].photo;
@@ -62,6 +57,7 @@ function showInfo(data, tabletop) {
     https: x = x.replace("/open?id=", "/uc?export=view&id=");
     x = x.replace("/file/d/", "/uc?export=view&id=");
     x = x.replace("/preview?usp=drivesdk", " ");
+    names=names.replace("S","");
     var headOne = document.querySelector("#abc");
 
     $(headOne).append(
@@ -70,15 +66,15 @@ function showInfo(data, tabletop) {
         ' class="displayimg" onclick="imfun(id)" src=' +
         x +
         ' ><div class="contx"><a href="#"  data-name=' +
-        y +
+        names+(i+1)+
         " data-price=" +
-        Math.floor((Math.random() + 2 * i) * 100) +
+        y +
         " data-photo=" +
         x +
         " name=" +
-        y +
+        names+(i+1) +
         " rel=" +
-        Math.floor((Math.random() + 2 * i) * 100) +
+        y +
         " type=" +
         x +
         ' class="add-to-cart btn" id=' +
@@ -302,7 +298,7 @@ function showInfo(data, tabletop) {
         data: $("#form-trial").serializeObject(),
       });
       alert(
-        "Your order is confirmed \n Please Contact 8600000000 \nOrder id:" +
+        "Your order is confirmed \n Please Contact Babita Agarwal--8617550611 \nOrder id:" +
           document.getElementById("ids").value
       );
       window.shoppingCart.clearCart();
@@ -396,8 +392,7 @@ function showInfo(data, tabletop) {
         cartArray[i].name +
         ">+</button></span></div></td>" +
         " = " +
-        "<td> &nbsp;&nbsp;₹" +
-        cartArray[i].total +
+        "<td> &nbsp;&nbsp;" +
         "</td>" +
         "<td><button class='delete-item btn btn-danger' data-name=" +
         cartArray[i].name +

@@ -168,7 +168,7 @@ window.shoppingCart = (function () {
       data: $("#form-trial").serializeObject(),
     });
     alert(
-      "Your order is confirmed \n Order id:" +
+      "Your order is confirmed \n Please Contact Babita Agarwal--8617550611 \nOrder id:" +
         document.getElementById("ids").value
     );
     window.shoppingCart.clearCart();
@@ -271,8 +271,7 @@ window.displayCart = function () {
       cartArray[i].name +
       ">+</button></span></div></td>" +
       " = " +
-      "<td> &nbsp;&nbsp;₹" +
-      cartArray[i].total +
+      "<td> &nbsp;&nbsp;" +
       "</td>" +
       "<td><button class='delete-item btn btn-danger' data-name=" +
       cartArray[i].name +
